@@ -1,0 +1,4 @@
+// Arquivos de dica ajudam o Visual Studio IDE a interpretar identificadores do Visual C++
+// por exemplo, nomes de funções e macros.
+// Para obter mais informações, consulte https://go.microsoft.com/fwlink/?linkid=865984
+#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; } virtual EventType GetEventType() const override { return GetStaticType(); } virtual const char* GetName() const override { return #type; }
